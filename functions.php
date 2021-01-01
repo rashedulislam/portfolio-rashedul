@@ -322,3 +322,15 @@ require get_template_directory() . '/inc/template-functions.php';
 
 require get_template_directory() . '/inc/customizer.php';
 
+
+if ( ! function_exists( 'rashedul_islam_the_custom_logo' ) ) :
+function rashedul_islam_the_custom_logo() {
+	if ( function_exists( 'the_custom_logo' ) ) {
+		echo '<div class="site-logo">';
+
+		the_custom_logo();
+
+		echo '</div><!-- .site-logo -->';
+	}
+}
+endif;
